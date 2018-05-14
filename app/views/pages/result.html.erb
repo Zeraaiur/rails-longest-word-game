@@ -1,0 +1,12 @@
+<div class="row letters_row_small">
+  <% @my_word_letters.each do |letter| %>
+  <div class="col-xs-1 grid_item"> <%= letter %></div>
+  <% end %>
+</div>
+
+<h2 style="color: <%= @color %>;"> <%= @answer %> </h2>
+
+<form action="/pages/game" method="get" class="form-inline my_form">
+  <%= hidden_field_tag "score", @score %>
+  <input class="btn-primary" type="submit" value="Try again">
+</form>
